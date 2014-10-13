@@ -1,0 +1,25 @@
+<%= form_for(@auto_brand) do |f| %>
+  <% if @auto_brand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auto_brand.errors.count, "error") %> prohibited this auto_brand from being saved:</h2>
+
+      <ul>
+      <% @auto_brand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_brand_photo, (t"photo") %><br>
+    <%= f.file_field :auto_brand_photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

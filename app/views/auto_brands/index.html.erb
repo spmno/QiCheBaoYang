@@ -1,0 +1,29 @@
+<h1><%= I18n.t"list_auto_brand" %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t"name" %></th>
+      <th><%= t"photo" %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auto_brands.each do |auto_brand| %>
+      <tr>
+        <td><%= auto_brand.name %></td>
+        <td><%= auto_brand.auto_brand_photo %></td>
+        <td><%= link_to 'Show', auto_brand %></td>
+        <td><%= link_to 'Edit', edit_auto_brand_path(auto_brand) %></td>
+        <td><%= link_to 'Destroy', auto_brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to (t"new_auto_brand"), new_auto_brand_path %>
