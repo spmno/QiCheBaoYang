@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @auto_model.name %>
+</p>
+
+<p>
+  <strong>Auto model photo:</strong>
+  <%= @auto_model.auto_model_photo %>
+</p>
+
+<p>
+  <strong>Auto brand:</strong>
+  <%= @auto_model.auto_brand_id %>
+</p>
+
+<%= link_to 'Edit', edit_auto_model_path(@auto_model) %> |
+<%= link_to 'Back', auto_models_path %>

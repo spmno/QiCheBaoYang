@@ -1,0 +1,2 @@
+module AutoModelsHelper
+end

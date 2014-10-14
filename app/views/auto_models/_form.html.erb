@@ -1,0 +1,30 @@
+<%= form_for(@auto_model) do |f| %>
+  <% if @auto_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auto_model.errors.count, "error") %> prohibited this auto_model from being saved:</h2>
+
+      <ul>
+      <% @auto_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_model_photo %><br>
+    <%= f.file_field :auto_model_photo %>
+  </div>
+
+  <div class="field">
+    <%= f.select(:auto_brand_id, @auto_brands.collect{|t| [t.name, t.id]}, :prompt => (t"select_auto_brand")) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,15 +2,24 @@ zh-CN:
   activerecord:
     models:
       auto_brand: '汽车品牌'
+      auto_model: '汽车型号'
     attributes:
       auto_brand:
         name: '名称'
-        desc: '备注'
+        auto_brand_photo: '品牌标示'
+      auto_model:
+        name: '名称'
+        auto_model_photo: '图片'
+
 
   list_auto_brand: '汽车品牌列表'
+  list_auto_model: '汽车型号列表'
+  auto_brand: '汽车品牌'
   name: '名称'
   photo: '图片'
   new_auto_brand: '新建品牌'
+  new_auto_model: '新建汽车型号'
+  select_auto_brand: '选择汽车品牌'
   date:
     abbr_day_names:
     - 日
