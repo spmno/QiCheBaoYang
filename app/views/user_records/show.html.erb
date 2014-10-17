@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_record.user_id %>
+</p>
+
+<p>
+  <strong>Auto model:</strong>
+  <%= @user_record.auto_model_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_record_path(@user_record) %> |
+<%= link_to 'Back', user_records_path %>

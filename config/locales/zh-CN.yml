@@ -3,6 +3,7 @@ zh-CN:
     models:
       auto_brand: '汽车品牌'
       auto_model: '汽车型号'
+      user_record: '用户记录'
     attributes:
       auto_brand:
         name: '名称'
@@ -10,6 +11,10 @@ zh-CN:
       auto_model:
         name: '名称'
         auto_model_photo: '图片'
+      user_record:
+        user_id: '用户'
+        auto_model_id: '车型'
+        auto_brand_id: '品牌'
 
 
   list_auto_brand: '汽车品牌列表'

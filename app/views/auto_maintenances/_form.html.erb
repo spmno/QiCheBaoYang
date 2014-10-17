@@ -1,0 +1,17 @@
+<%= form_for(@auto_maintenance) do |f| %>
+  <% if @auto_maintenance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auto_maintenance.errors.count, "error") %> prohibited this auto_maintenance from being saved:</h2>
+
+      <ul>
+      <% @auto_maintenance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>养车帮</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,7 +51,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<%= yield %>
 
-</body>
-</html>
+<div class="jumbotron container">
+  <h2>请输入您的车型，我们将为您提供专业的服务!</h2>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" role="button">完成</a></p>
+</div>

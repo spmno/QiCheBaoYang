@@ -1,0 +1,24 @@
+<%= form_for(@user_record) do |f| %>
+  <% if @user_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_record.errors.count, "error") %> prohibited this user_record from being saved:</h2>
+
+      <ul>
+      <% @user_record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <%= f.label :auto_brand_id, class: 'col-md-1' %>
+    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-2' %>
+
+    <%= f.label :auto_model_id, class: 'col-md-1' %>
+    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌', class: 'col-md-2'} %>
+  </div>
+
+  <%= f.submit ("完成"), class: "btn btn-primary btn-lg"%>
+
+<% end %>

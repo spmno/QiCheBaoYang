@@ -1,14 +1,18 @@
 Qichebaoyang::Application.routes.draw do
+  resources :user_records
+
   devise_for :users
   resources :auto_models
-
+  resources :auto_maintenances
   resources :auto_brands
+
+  get 'user_record/update_auto_models' => 'user_records#update_auto_models'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'user_records#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
