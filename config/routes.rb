@@ -1,4 +1,6 @@
 Qichebaoyang::Application.routes.draw do
+  resources :service_stations
+
   resources :user_records
 
   devise_for :users
