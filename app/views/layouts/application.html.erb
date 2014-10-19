@@ -5,6 +5,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="http://developer.amap.com/Public/css/demo.Default.css" />
   <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag params[:controller] %>
   <%= javascript_include_tag "application"%>
   <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
@@ -23,9 +24,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><%= link_to '周围服务点' , service_stations_path %></li>
-        <li><a href="/service_stations">保养问题</a></li>
+        <li><%= nav_link 'Home', new_user_record_path %></li>
+        <li><%= nav_link '周围服务点' , service_stations_path %></li>
+        <li><%= nav_link '保养问题' , service_stations_path %></li>
         <!--
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
