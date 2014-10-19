@@ -3,8 +3,10 @@
 <head>
   <title>养车帮</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" type="text/css" href="http://developer.amap.com/Public/css/demo.Default.css" />
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
 </head>
 <body>
