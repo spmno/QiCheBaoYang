@@ -2,14 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
 mapInit = ->
   mapObj = new AMap.Map("iCenter",{
     rotateEnable:true,
     dragEnable:true,
     zoomEnable:true,
     view:new AMap.View2D({
-      center:new AMap.LngLat(121.498586,31.239637), zoom:15
+      zoom:11
     })
   })
 
