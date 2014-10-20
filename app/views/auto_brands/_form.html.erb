@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field ">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :auto_brand_photo %><br>
-    <%= f.file_field :auto_brand_photo %>
+    <%= f.file_field :auto_brand_photo, class: 'input-group' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('complete'), class: 'btn btn-primary' %>
   </div>
 <% end %>

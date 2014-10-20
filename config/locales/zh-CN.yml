@@ -25,6 +25,8 @@ zh-CN:
   new_auto_brand: '新建品牌'
   new_auto_model: '新建汽车型号'
   select_auto_brand: '选择汽车品牌'
+  back: '返回'
+  complete: '完成'
   date:
     abbr_day_names:
     - 日
