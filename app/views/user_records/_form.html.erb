@@ -10,15 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="row">
-    <%= f.label :auto_brand_id, class: 'col-md-1' %>
-    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-2' %>
-
-    <%= f.label :auto_model_id, class: 'col-md-1' %>
-    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌', class: 'col-md-2'} %>
+</br>
+  <div class="row" id="select-model">
+    <%= f.label :auto_brand_id, class: 'col-md-2 col-md-offset-1' %>
+    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-3' %>
+    <%= f.label :auto_model_id, class: 'col-md-2 col-md-offset-1' %>
+    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌', class: 'col-md-3'} %>
   </div>
-
-  <%= f.submit ("完成"), class: "btn btn-primary btn-lg"%>
+</br>
+</br>
+  <%= f.submit ("完成"), class: "btn btn-primary btn-lg col-md-offset-1"%>
 
 <% end %>
