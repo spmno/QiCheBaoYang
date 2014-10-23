@@ -4,6 +4,7 @@ zh-CN:
       auto_brand: '汽车品牌'
       auto_model: '汽车型号'
       user_record: '用户记录'
+      user: '用户'
     attributes:
       auto_brand:
         name: '名称'
@@ -15,10 +16,17 @@ zh-CN:
         user_id: '用户'
         auto_model_id: '车型'
         auto_brand_id: '品牌'
+      user:
+        email: '电子邮件'
+        password: '密码'
+        password_confirmation: '确认密码'
+        remember_me: '记住我'
+
 
 
   list_auto_brand: '汽车品牌列表'
   list_auto_model: '汽车型号列表'
+  list_user: '用户列表'
   auto_brand: '汽车品牌'
   name: '名称'
   photo: '图片'
@@ -27,6 +35,15 @@ zh-CN:
   select_auto_brand: '选择汽车品牌'
   back: '返回'
   complete: '完成'
+  sign_up: '注册'
+  log_in: '登录'
+  manager: '管理'
+  exit: '退出'
+  change_password: '修改密码'
+  forget_password: '忘记密码'
+  donot_receive_confirmation: '没有收到确认'
+  donot_receive_unlock: '没有收到解锁'
+
   date:
     abbr_day_names:
     - 日
