@@ -1,5 +1,6 @@
 Qichebaoyang::Application.routes.draw do
-  resources :service_stations
+resources :service_items
+resources :service_stations
   resources :user_administrations
   resources :user_records
 

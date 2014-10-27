@@ -4,6 +4,9 @@
   <thead>
     <tr>
       <th><%= t"name" %></th>
+      <% @roles.each do |role| %>
+       <th><%= role.name %></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -11,10 +14,23 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
+        <% @roles.each do |role| %>
+          <% if user.has_role? role.name %>
+            <td><%= check_box_tag 'roles[]', role.id, true %></td>
+          <% else %>
+            <td><%= check_box_tag 'roles[]', role.id %></td>
+         <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<h2>先把各种有用的链接放到这吧</h2>
+<%= link_to t("new_auto_brand"), new_auto_brand_path, class:'col-mod-2' %>
+<%= link_to t("new_auto_model"), new_auto_model_path, class:'col-mod-2' %>
+<%= link_to t("new_auto_maintenances"), new_auto_maintenance_path, class:'col-mod-2' %>
+<%= link_to t("new_service_item"), new_service_item_path, class:'col-mod-2' %>
 
 <br>
 

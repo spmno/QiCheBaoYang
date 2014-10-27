@@ -5,6 +5,7 @@ class UserAdministrationsController < ApplicationController
   # GET /user_administrations.json
   def index
     @users = User.all
+    @roles = Role.all
   end
 
   # GET /user_administrations/1

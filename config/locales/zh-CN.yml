@@ -32,6 +32,8 @@ zh-CN:
   photo: '图片'
   new_auto_brand: '新建品牌'
   new_auto_model: '新建汽车型号'
+  new_service_item: '新建保养项目'
+  new_auto_maintenances: '新建修理厂'
   select_auto_brand: '选择汽车品牌'
   back: '返回'
   complete: '完成'

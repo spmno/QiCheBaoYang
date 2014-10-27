@@ -1,0 +1,33 @@
+<%= form_for(@service_item) do |f| %>
+  <% if @service_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_item.errors.count, "error") %> prohibited this service_item from being saved:</h2>
+
+      <ul>
+      <% @service_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :duration1 %><br>
+    <%= f.number_field :duration1 %>
+  </div>
+  <div class="field">
+    <%= f.label :duration2 %><br>
+    <%= f.number_field :duration2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mile %><br>
+    <%= f.number_field :mile %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
