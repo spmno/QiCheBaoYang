@@ -21,7 +21,16 @@ zh-CN:
         password: '密码'
         password_confirmation: '确认密码'
         remember_me: '记住我'
-
+      service_station:
+        name: '维护中心名称'
+        address: '地址'
+        longitude: '经度'
+        latitude: '纬度'
+      service_item:
+        name: '保养项目名称'
+        duration1: '起始时间'
+        duration2: '结束时间'
+        mile: '公里数'
 
 
   list_auto_brand: '汽车品牌列表'
