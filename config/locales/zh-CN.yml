@@ -54,6 +54,8 @@ zh-CN:
   forget_password: '忘记密码'
   donot_receive_confirmation: '没有收到确认'
   donot_receive_unlock: '没有收到解锁'
+  mile: '里程数'
+  buy_date: '购买日期'
 
   date:
     abbr_day_names:
