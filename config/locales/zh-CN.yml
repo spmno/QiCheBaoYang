@@ -16,6 +16,8 @@ zh-CN:
         user_id: '用户'
         auto_model_id: '车型'
         auto_brand_id: '品牌'
+        purchasing_date: '购买日期'
+        mile: '里程'
       user:
         email: '电子邮件'
         password: '密码'
@@ -55,7 +57,7 @@ zh-CN:
   donot_receive_confirmation: '没有收到确认'
   donot_receive_unlock: '没有收到解锁'
   mile: '里程数'
-  buy_date: '购买日期'
+  purchasing_date: '购买日期'
 
   date:
     abbr_day_names:

@@ -1,13 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @user_record.user_id %>
+  <strong><%= t('activerecord.models.user') %>:</strong>
+  <%= @user_record.user.name %>
 </p>
 
 <p>
-  <strong>Auto model:</strong>
-  <%= @user_record.auto_model_id %>
+  <strong><%= t('activerecord.models.auto_model') %>:</strong>
+  <%= @user_record.auto_model.name %>
+</p>
+<p>
+  <strong><%= t('purchasing_date') %>:</strong>
+  <%= @user_record.purchasing_date %>
+</p>
+<p>
+  <strong><%= t("mile") %>:</strong>
+  <%= @user_record.mile %>
 </p>
 
 <%= link_to 'Edit', edit_user_record_path(@user_record) %> |
