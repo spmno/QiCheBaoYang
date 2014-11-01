@@ -19,6 +19,9 @@ class UserRecordsController < ApplicationController
   # GET /user_records/new
   def new
     @user_record = UserRecord.new
+    if user_signed_in?
+      @user_record.user_id = current_user.id
+    end
   end
 
   # GET /user_records/1/edit
@@ -28,7 +31,11 @@ class UserRecordsController < ApplicationController
   # POST /user_records
   # POST /user_records.json
   def create
+    if user_signed_in?
+      redirect_to new_user_session_path
+    end
     @user_record = UserRecord.new(user_record_params)
+    @user_record.user_id = 1
 
     respond_to do |format|
       if @user_record.save
@@ -73,6 +80,6 @@ class UserRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_record_params
-      params.require(:user_record).permit(:user_id, :auto_model_id)
+      params.require(:user_record).permit(:user_id, :auto_model_id, :purchasing_date, :mile)
     end
 end

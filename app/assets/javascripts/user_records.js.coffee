@@ -6,5 +6,6 @@ ready = ->
   $('#user_record_auto_brand_id').change ->
     $.get('/user_record/update_auto_models.js?auto_brand_id=' + $('#user_record_auto_brand_id').val())
   $('.datepicker').datepicker()
+  $(".datepicker").datepicker('option', 'dateFormat','yy-mm-dd');
 
 $(document).ready(ready)
