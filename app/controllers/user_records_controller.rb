@@ -19,8 +19,10 @@ class UserRecordsController < ApplicationController
   # GET /user_records/new
   def new
     @user_record = UserRecord.new
+    @is_signed_in = false
     if user_signed_in?
       @user_record.user_id = current_user.id
+      @is_signed_in = true
     end
   end
 
@@ -31,9 +33,6 @@ class UserRecordsController < ApplicationController
   # POST /user_records
   # POST /user_records.json
   def create
-    if user_signed_in?
-      redirect_to new_user_session_path
-    end
     @user_record = UserRecord.new(user_record_params)
     @user_record.user_id = 1
 
