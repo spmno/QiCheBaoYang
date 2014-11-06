@@ -22,7 +22,6 @@ class UserRecordsController < ApplicationController
     @is_signed_in = false
     if user_signed_in?
       @user_record.user_id = current_user.id
-      @is_signed_in = true
     end
   end
 
@@ -34,8 +33,16 @@ class UserRecordsController < ApplicationController
   # POST /user_records.json
   def create
     @user_record = UserRecord.new(user_record_params)
-    @user_record.user_id = 1
 
+    if !user_signed_in?
+      cookies[:auto_model_id] = params[:user_record][:auto_model_id]
+      cookies[:purchasing_date] = params[:user_record][:purchasing_date]
+      cookies[:mile] = params[:user_record][:mile]
+      session[:return_to] = user_record_url
+      return redirect_to new_user_session_path
+    else
+      @user_record.user_id = current_user.id
+    end
     respond_to do |format|
       if @user_record.save
         format.html { redirect_to @user_record, notice: 'User record was successfully created.' }
