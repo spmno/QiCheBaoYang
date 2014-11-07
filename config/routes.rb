@@ -5,6 +5,9 @@ resources :service_stations
   resources :user_records
 
   devise_for :users
+  resources :users do
+    resource :user_records
+  end
   resources :auto_models
   resources :auto_maintenances
   resources :auto_brands
