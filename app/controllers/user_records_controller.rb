@@ -38,7 +38,7 @@ class UserRecordsController < ApplicationController
       cookies[:auto_model_id] = params[:user_record][:auto_model_id]
       cookies[:purchasing_date] = params[:user_record][:purchasing_date]
       cookies[:mile] = params[:user_record][:mile]
-      session[:return_to] = user_record_url
+      #session[:return_to] = user_record_url
       return redirect_to new_user_session_path
     else
       @user_record.user_id = current_user.id
