@@ -28,6 +28,7 @@ zh-CN:
         address: '地址'
         longitude: '经度'
         latitude: '纬度'
+        location: '位置-POINT(x y)'
       service_item:
         name: '保养项目名称'
         duration1: '起始时间'

@@ -14,6 +14,7 @@ class UserRecordsController < ApplicationController
   # GET /user_records/1
   # GET /user_records/1.json
   def show
+    @user = User.find(params[:user_id])
   end
 
   # GET /user_records/new
