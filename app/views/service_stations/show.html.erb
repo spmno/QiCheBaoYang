@@ -14,6 +14,14 @@
   <strong>Location:</strong>
   <%= @service_station.location %>
 </p>
+<p>
+  <strong>Mobile Phone:</strong>
+  <%= @service_station.mobile_phone %>
+</p>
+<p>
+  <strong>Office Phone:</strong>
+  <%= @service_station.office_phone %>
+</p>
 
 <%= link_to 'Edit', edit_service_station_path(@service_station) %> |
 <%= link_to 'Back', service_stations_path %>

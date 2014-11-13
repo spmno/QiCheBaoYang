@@ -69,6 +69,6 @@ class ServiceStationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_station_params
-      params.require(:service_station).permit(:name, :address, :location)
+      params.require(:service_station).permit(:name, :address, :location, :mobile_phone, :office_phone)
     end
 end

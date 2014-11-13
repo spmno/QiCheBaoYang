@@ -15,6 +15,16 @@ class UserRecordsController < ApplicationController
   # GET /user_records/1.json
   def show
     @user = User.find(params[:user_id])
+    @user_records = user.user_records
+    @user_records.each do | user_record |
+      current_model = user_record.model.id
+      mile = user_record.mile
+      purchasing_date = (user_record.purchasing_data - Date.today).to_i
+      time_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND purchasing_date > :duration1 AND purchasing_date < :duration2",
+        auto_model_id: current_model, duration1: user_record.duration1, duration2: user_record.duration2)
+      mile_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND mile > :mile",
+        auto_model_id: current_model, mile: mile)
+    end
   end
 
   # GET /user_records/new
