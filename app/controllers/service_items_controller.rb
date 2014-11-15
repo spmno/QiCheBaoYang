@@ -7,6 +7,10 @@ class ServiceItemsController < ApplicationController
     @service_items = ServiceItem.all
   end
 
+  def update_auto_models
+    @auto_models = AutoModel.where(auto_brand_id: params[:auto_brand_id])
+  end
+
   # GET /service_items/1
   # GET /service_items/1.json
   def show
@@ -69,6 +73,6 @@ class ServiceItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_item_params
-      params.require(:service_item).permit(:name, :duration1, :duration2, :mile, :auto_model_id)
+      params.require(:service_item).permit(:name, :duration1, :duration2, :mile, :auto_model_id, :step)
     end
 end

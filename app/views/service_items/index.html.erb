@@ -1,12 +1,14 @@
-<h1>Listing service_items</h1>
+<h1><%= t("list_service_item") %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Duration1</th>
-      <th>Duration2</th>
-      <th>Mile</th>
+      <th><%= t("activerecord.attributes.service_item.name") %></th>
+      <th><%= t("activerecord.attributes.service_item.duration1") %></th>
+      <th><%= t("activerecord.attributes.service_item.duration2") %></th>
+      <th><%= t("activerecord.attributes.service_item.mile") %></th>
+      <th><%= t("activerecord.attributes.service_item.auto_model_id") %></th>
+      <td><%= t("activerecord.attributes.service_item.step") %></td>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +22,8 @@
         <td><%= service_item.duration1 %></td>
         <td><%= service_item.duration2 %></td>
         <td><%= service_item.mile %></td>
+        <td><%= service_item.auto_model.name %></td>
+        <td><%= service_item.step %></td>
         <td><%= link_to 'Show', service_item %></td>
         <td><%= link_to 'Edit', edit_service_item_path(service_item) %></td>
         <td><%= link_to 'Destroy', service_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Service item', new_service_item_path %>
+<%= link_to t("new_service_item"), new_service_item_path %>

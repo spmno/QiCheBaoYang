@@ -1,0 +1,5 @@
+/**
+ * Created by spmno on 2014/10/16.
+ */
+$('#service_item_auto_model_id').html("<%= escape_javascript options_from_collection_for_select(@auto_models, :id, :name) %>");
+$('#service_item_auto_model_id').addClass('form-control');

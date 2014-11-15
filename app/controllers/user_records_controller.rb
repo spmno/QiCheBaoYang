@@ -15,7 +15,7 @@ class UserRecordsController < ApplicationController
   # GET /user_records/1.json
   def show
     @user = User.find(params[:user_id])
-    @user_records = user.user_records
+    @user_records = @user.user_records
     @user_records.each do | user_record |
       current_model = user_record.model.id
       mile = user_record.mile
@@ -24,6 +24,7 @@ class UserRecordsController < ApplicationController
         auto_model_id: current_model, duration1: user_record.duration1, duration2: user_record.duration2)
       mile_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND mile > :mile",
         auto_model_id: current_model, mile: mile)
+
     end
   end
 
@@ -92,7 +93,12 @@ class UserRecordsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_record
-      @user_record = UserRecord.find(params[:id])
+      if params[:id]
+        @user_record = UserRecord.find(params[:id])
+      else
+        @user_records = current_user.user_records
+      end
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

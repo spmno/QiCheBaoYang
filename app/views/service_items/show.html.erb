@@ -1,23 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t("activerecord.attributes.service_item.name") %></strong>
   <%= @service_item.name %>
 </p>
 
 <p>
-  <strong>Duration1:</strong>
+  <strong><%= t("activerecord.attributes.service_item.duration1") %></strong>
   <%= @service_item.duration1 %>
 </p>
 
 <p>
-  <strong>Duration2:</strong>
+  <strong><%= t("activerecord.attributes.service_item.duration2") %></strong>
   <%= @service_item.duration2 %>
 </p>
 
 <p>
-  <strong>Mile:</strong>
+  <strong><%= t("activerecord.attributes.service_item.mile") %></strong>
   <%= @service_item.mile %>
+</p>
+
+<p>
+  <strong><%= t("activerecord.attributes.service_item.auto_model_id") %></strong>
+  <%= @service_item.auto_model.name %>
+</p>
+
+<p>
+  <strong><%= t("activerecord.attributes.service_item.step") %></strong>
+  <%= @service_item.step %>
 </p>
 
 <%= link_to 'Edit', edit_service_item_path(@service_item) %> |

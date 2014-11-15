@@ -13,7 +13,7 @@ resources :service_stations
   resources :auto_brands
 
   get 'user_record/update_auto_models' => 'user_records#update_auto_models'
-
+  get 'service_item/update_auto_models' => 'service_items#update_auto_models'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
