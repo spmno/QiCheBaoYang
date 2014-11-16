@@ -34,11 +34,15 @@ zh-CN:
         duration1: '起始时间'
         duration2: '结束时间'
         mile: '公里数'
+        auto_model_id: '汽车型号'
+        auto_brand_id: '汽车品牌'
+        step: '第几次保养'
 
 
   list_auto_brand: '汽车品牌列表'
   list_auto_model: '汽车型号列表'
   list_user: '用户列表'
+  list_service_item: '保养记录列表'
   auto_brand: '汽车品牌'
   name: '名称'
   photo: '图片'

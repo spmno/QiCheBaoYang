@@ -20,10 +20,15 @@ class UserRecordsController < ApplicationController
       current_model = user_record.model.id
       mile = user_record.mile
       purchasing_date = (user_record.purchasing_data - Date.today).to_i
-      time_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND purchasing_date > :duration1 AND purchasing_date < :duration2",
-        auto_model_id: current_model, duration1: user_record.duration1, duration2: user_record.duration2)
-      mile_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND mile > :mile",
-        auto_model_id: current_model, mile: mile)
+      mile_step = get_step_from_mile mile
+      date_step = get_step_from_date date
+      step = (mile_step > date_step) ? mile_step : date_step
+      service_items = ServiceItem.where("auto_model_id = :auto_model_id AND step = :step",
+        auto_model_id: current_model, step: step)
+      #time_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND purchasing_date > :duration1 AND purchasing_date < :duration2",
+      #  auto_model_id: current_model, duration1: user_record.duration1, duration2: user_record.duration2)
+      #mile_service_item = ServiceItem.where("auto_model_id = :auto_model_id AND mile > :mile",
+      #  auto_model_id: current_model, mile: mile)
 
     end
   end
