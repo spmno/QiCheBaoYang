@@ -5,9 +5,9 @@
 
 <p>
   <% @user_records.each do | user_record | %>
-    <% current_model = user_record.model.id %>
+    <% current_model = user_record.auto_model.id %>
     <% mile = user_record.mile %>
-    <% purchasing_date = (user_record.purchasing_data - Date.today).to_i %>
+    <% date = (user_record.purchasing_date - Date.today).to_i %>
     <% mile_step = get_step_from_mile mile %>
     <% date_step = get_step_from_date date %>
     <% step = (mile_step > date_step) ? mile_step : date_step %>

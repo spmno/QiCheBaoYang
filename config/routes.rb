@@ -1,4 +1,8 @@
 Qichebaoyang::Application.routes.draw do
+  resources :customer_service_item_ships
+
+  resources :customers
+
 resources :service_items
 resources :service_stations
   resources :user_administrations
