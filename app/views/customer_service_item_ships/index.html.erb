@@ -1,0 +1,27 @@
+<h1>Listing customer_service_item_ships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Service item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_service_item_ships.each do |customer_service_item_ship| %>
+      <tr>
+        <td><%= customer_service_item_ship.customer_id %></td>
+        <td><%= customer_service_item_ship.service_item_id %></td>
+        <td><%= link_to 'Show', customer_service_item_ship %></td>
+        <td><%= link_to 'Edit', edit_customer_service_item_ship_path(customer_service_item_ship) %></td>
+        <td><%= link_to 'Destroy', customer_service_item_ship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer service item ship', new_customer_service_item_ship_path %>
