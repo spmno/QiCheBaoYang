@@ -1,0 +1,27 @@
+<h1><%= t("list_car_maintenance_info") %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t("activerecord.attributes.car_maintenance_info.name") %></th>
+      <th><%= t("activerecord.attributes.car_maintenance_info.content") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @car_maintenance_infos.each do |car_maintenance_info| %>
+      <tr>
+        <td><%= car_maintenance_info.title %></td>
+        <td><%= car_maintenance_info.content %></td>
+        <td><%= link_to 'Show', car_maintenance_info %></td>
+        <td><%= link_to 'Edit', edit_car_maintenance_info_path(car_maintenance_info) %></td>
+        <td><%= link_to 'Destroy', car_maintenance_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t("new_car_maintenances_info"), new_car_maintenance_info_path %>

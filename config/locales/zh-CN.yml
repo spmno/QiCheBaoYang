@@ -37,12 +37,16 @@ zh-CN:
         auto_model_id: '汽车型号'
         auto_brand_id: '汽车品牌'
         step: '第几次保养'
+      car_maintenance_info:
+        name: '标题'
+        content: '内容'
 
 
   list_auto_brand: '汽车品牌列表'
   list_auto_model: '汽车型号列表'
   list_user: '用户列表'
   list_service_item: '保养记录列表'
+  list_car_maintenance_info: '保养信息列表'
   auto_brand: '汽车品牌'
   name: '名称'
   photo: '图片'
@@ -50,6 +54,7 @@ zh-CN:
   new_auto_model: '新建汽车型号'
   new_service_item: '新建保养项目'
   new_auto_maintenances: '新建修理厂'
+  new_car_maintenances_info: '新建保养问题'
   select_auto_brand: '选择汽车品牌'
   back: '返回'
   complete: '完成'
