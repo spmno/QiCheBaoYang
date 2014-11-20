@@ -4,7 +4,7 @@ class CarMaintenanceInfosController < ApplicationController
   respond_to :html
 
   def index
-    @car_maintenance_infos = CarMaintenanceInfo.all
+    @car_maintenance_infos = CarMaintenanceInfo.page(params[:page])
     respond_with(@car_maintenance_infos)
   end
 
