@@ -1,13 +1,28 @@
-<div class="container">
-  <div class="jumbotron col-md-offset-2 col-md-8 ">
-    <h3 class="text-center">请输入您的车型，我们将为您提供专业的服务!</h3>
-    <div class="col-md-8 col-md-offset-2 container">
-      <%= render 'form' %>
-    </div>
 
+<div class="images-slider">
+  <div id="fwslider">
+    <div class="slider_container">
+      <div class="slide">
+        <img src="images/car.jpg" alt=""/>
+        <div class="slide_content ">
+          <div class="slide_content_wrap">
+            <p class="description">养车帮</p>
+            <h4 class="title">让您的车焕然一新</h4>
+            <p class="description"><a href="#contact">去看看<img src="images/arrow.png" alt=""/></a></p>
+            <div class="slide-btns description">
+            <!-- <h4 class="title">请输入您的车型，我们将为您提供专业的服务!</h4> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-
-
-
+<div class="contact s4" id="contact">
+  <div class="container">
+    <h3>填写信息，提供服务</h3>
+    <%= render 'form' %>
+  </div>
+</div>

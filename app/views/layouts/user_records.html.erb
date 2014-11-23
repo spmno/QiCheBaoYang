@@ -2,13 +2,41 @@
 <html lang="zh-CN">
 <head>
   <title>养车帮</title>
+
+  <%= javascript_include_tag "application"%>
+  <%= javascript_include_tag params[:controller] %>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="http://developer.amap.com/Public/css/demo.Default.css" />
+  <link rel="stylesheet" href="/css/fwslider.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/slider.css" />
+  <script src="/js/css3-mediaqueries.js"></script>
+  <script src="/js/fwslider.js"></script>
+
+  <script type="text/javascript" src="/js/modernizr.custom.28468.js"></script>
+  <script type="text/javascript" src="/js/jquery.cslider.js"></script>
+
+  <script type="text/javascript">
+      $(function() {
+
+          $('#da-slider').cslider({
+              autoplay : true,
+              bgincrement : 450
+          });
+
+      });
+  </script>
+  <script type="text/javascript">
+      $(function() {
+
+          $('#da-slider1').cslider({
+              autoplay : true,
+              bgincrement : 450
+          });
+
+      });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= stylesheet_link_tag params[:controller] %>
-  <%= javascript_include_tag "application"%>
-  <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -47,14 +75,14 @@
 
 
   </div>
-<%= yield %>
+  <%= yield %>
 
-<div class="footer-top">
-  <div class="container">
-    <p class="pull-right"><a href="#">返回顶部</a></p>
-    <p>版权声明： 养车帮.</p>
+  <div class="footer-top">
+    <div class="container">
+      <p class="pull-right"><a href="#">返回顶部</a></p>
+      <p>版权声明： 养车帮.</p>
+    </div>
   </div>
-</div>
 </div>
 </body>
 </html>

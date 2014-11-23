@@ -11,21 +11,22 @@
     </div>
   <% end %>
 </br>
-  <div class="form-group">
-    <%= f.label :auto_brand_id, class:'control-label' %>
-    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'form-control' %>
-    <%= f.label :auto_model_id, class:'control-label' %>
-    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌', class: 'form-control'} %>
+
+  <div class="row">
+    <%= f.label :auto_brand_id, class: 'col-md-2' %>
+    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-4' %>
+    <%= f.label :auto_model_id, class: 'col-md-2' %>
+    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-md-4' %>
+  </div>
+  <div class="clearfix"> </div>
+  <div class="row">
+    <%= f.label :purchasing_date, class: 'col-md-2' %>
+    <%= f.text_field :purchasing_date, class: 'datepicker col-md-4' %>
+    <%= f.label :mile, class: 'col-md-2' %>
+    <%= f.number_field :mile, class: 'col-md-4' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :purchasing_date, class:'control-label' %>
-    <%= f.text_field :purchasing_date, class: 'form-control datepicker' %>
-    <%= f.label :mile, class:'control-label' %>
-    <%= f.number_field :mile, class: 'form-control' %>
-  </div>
 
-  <div class="form-group">
-    <%= f.submit ("完成"), class: "btn btn-primary btn-lg"%>
-  </div>
+  <%= f.submit ("完成"), class: "btn btn-primary btn-lg"%>
+
 <% end %>

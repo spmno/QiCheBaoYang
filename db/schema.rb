@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018055352) do
+ActiveRecord::Schema.define(version: 20141119064718) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "auto_brands", force: true do |t|
     t.string   "name"
@@ -28,13 +32,58 @@ ActiveRecord::Schema.define(version: 20141018055352) do
     t.datetime "updated_at"
   end
 
+  create_table "car_maintenance_infos", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customer_service_item_ships", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "service_item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.integer  "user_id"
+    t.float    "amount"
+    t.integer  "user_point"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
+  add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "service_items", force: true do |t|
+    t.string   "name"
+    t.integer  "duration1"
+    t.integer  "duration2"
+    t.integer  "mile"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "auto_model_id"
+    t.integer  "step"
+  end
+
   create_table "service_stations", force: true do |t|
     t.string   "name"
     t.string   "address"
-    t.float    "longitude"
-    t.float    "latitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.spatial  "location",     limit: {:srid=>4326, :type=>"point", :geographic=>true}
+    t.string   "office_phone"
+    t.string   "mobile_phone"
   end
 
   create_table "user_records", force: true do |t|
@@ -42,6 +91,8 @@ ActiveRecord::Schema.define(version: 20141018055352) do
     t.integer  "auto_model_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "purchasing_date"
+    t.integer  "mile"
   end
 
   create_table "users", force: true do |t|
@@ -59,7 +110,14 @@ ActiveRecord::Schema.define(version: 20141018055352) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "users_roles", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
 end
