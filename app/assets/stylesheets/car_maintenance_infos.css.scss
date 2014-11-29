@@ -2,6 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  color: #ffffff;
+article{
+  margin-bottom:40px;
+}
+
+article .post-heading h3 {
+  margin-bottom:20px;
+}
+
+article .post-heading h3 a {
+  font-weight:700;
+  color:#353535;
+}
+
+article .post-heading h3 a:hover {
+  text-decoration:none;
+}
+
+.bottom-article{
+  overflow: hidden;
+  border-top:1px solid #f5f5f5;
+  border-bottom:1px solid #f5f5f5;
+  padding:10px 0 10px 0;
+  margin-top:20px;
+}
+
+#content {
+  position:relative;
+  background: none repeat scroll 0 0 #f5f5f5;
+  padding:50px 0 40px 0;
+}
+
+#content img {
+  max-width:100%;
+  height:auto;
+}
+
+.field {
+
+}
+
+.field > input {
+  height: 2em;
+}
+
+.field > textarea {
+  height: 10em;
+}
+
+h1 {
+  
 }

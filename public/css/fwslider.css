@@ -117,10 +117,11 @@ body > div.images-slider {
 	color: #7B6C63;
 }
 #fwslider .description { /* Slider Description Style */
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Arial', sans-serif;
     opacity: 0;
     color:#ffffff;
-    font-size: 1.2em;
+    font-size: 1.7em;
+	font-weight:bold;
     padding:0px 0 1em;
     clear:both;
    	text-align:left;

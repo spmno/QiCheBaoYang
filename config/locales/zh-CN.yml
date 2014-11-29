@@ -38,7 +38,7 @@ zh-CN:
         auto_brand_id: '汽车品牌'
         step: '第几次保养'
       car_maintenance_info:
-        name: '标题'
+        title: '标题'
         content: '内容'
 
 

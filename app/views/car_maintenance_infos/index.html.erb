@@ -1,27 +1,30 @@
 <h1><%= t("list_car_maintenance_info") %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t("activerecord.attributes.car_maintenance_info.name") %></th>
-      <th><%= t("activerecord.attributes.car_maintenance_info.content") %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @car_maintenance_infos.each do |car_maintenance_info| %>
-      <tr>
-        <td><%= car_maintenance_info.title %></td>
-        <td><%= car_maintenance_info.content %></td>
-        <td><%= link_to 'Show', car_maintenance_info %></td>
-        <td><%= link_to 'Edit', edit_car_maintenance_info_path(car_maintenance_info) %></td>
-        <td><%= link_to 'Destroy', car_maintenance_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <article>
+          <% @car_maintenance_infos.each do |car_maintenance_info| %>
+            <div class="post-heading">
+              <h3><%= car_maintenance_info.title %></h3>
+            </div>
+            <p>
+              <%= car_maintenance_info.content %>
+            </p>
 
+            <div class="bottom-article">
+              <%= link_to 'Show', car_maintenance_info %>
+              <%= link_to 'Edit', edit_car_maintenance_info_path(car_maintenance_info) %>
+              <%= link_to 'Destroy', car_maintenance_info, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          <% end %>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 <br>
 
 <%= link_to t("new_car_maintenances_info"), new_car_maintenance_info_path %>

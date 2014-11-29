@@ -13,12 +13,14 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class:"col-md-8" %>
   </div>
+    <div class="clearfix"> </div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class:"col-md-8" %>
   </div>
+    <div class="clearfix"> </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -47,7 +47,7 @@ img{max-width:100%;}
 /*end reset*/
 body {
   font-family: 'Raleway', sans-serif;
-  background:#ffffff;
+  background:#303030;
   font-size:100%;
 }
 /* start header */
@@ -340,7 +340,7 @@ body {
 .skills{
   background-size: 100% 100%;
   padding:6% 0;
-  background:url("../images/skills.jpg") no-repeat;
+  background:url("/images/skills.jpg") no-repeat;
 }
 .skills h4{
   font-family: 'Raleway', sans-serif;
@@ -1032,34 +1032,7 @@ div.team-member {
   border-radius: 50%;
   background-color: #ccc;
 }
-.post {
-  background: #7B6C63;
-  color: #fff;
-  width: 80px;
-  height: 80px;
-  padding: 12px;
-  text-align: center;
-  border: 7px solid #EBEBEB;
-  position: absolute;
-  left: 47em;
-  border-radius: 30em;
-  -webkit-border-radius: 30em;
-  -moz-border-radius: 30em;
-  -o-border-radius: 30em;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.post a{
-  color:#fff;
-  text-decoration: none;
-}
-.post:hover {
-  background: #7C4F34;
-  color: #fff;
-}
+
 /*---contact----*/
 .contact{
   text-align: center;
@@ -1074,37 +1047,7 @@ div.team-member {
   text-align: center;
   padding-bottom: 2%;
 }
-.contact p.a {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.2em;
-  padding: 0.5em 0;
-  color: #BEBEBE;
-  line-height: 1.5em;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 4%;
-  font-weight: 100;
-}
 
-.contact textarea{
-  width: 85%;
-  margin: 0 auto;
-  display: block;
-  background:none;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-top: 2%;
-  height: 120px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.875em;
-  color: #545046;
-  outline: none;
-  resize:none;
-  border-top: 2px solid #242424;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
 .contact input[type="submit"]{
   font-family: 'Raleway', sans-serif;
   font-size: 0.875em;
@@ -1131,8 +1074,9 @@ div.team-member {
 }
 /*---footer-top----*/
 .footer-top{
-  padding:6% 0;
+  padding:4% 0;
   background:#222222;
+  float: bottom;
 }
 .footer-top p {
   font-family: 'Raleway', sans-serif;
@@ -1218,19 +1162,7 @@ div.team-member {
   color: #fff;
   text-decoration: none;
 }
-#toTop {
-  display: none;
-  text-decoration: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  overflow: hidden;
-  width: 32px;
-  height:32px;
-  border: none;
-  text-indent: 100%;
-  background: url(/images/move-up.png) no-repeat right top;
-}
+
 /*--media-queries--*/
 @media only screen and (max-width:1440px) {
   .view {
@@ -1572,10 +1504,10 @@ div.team-member {
     padding-bottom: 23%;
   }
   div.port p a span {
-    background: url(../images/arrow.png) no-repeat -2px 3px;
+    background: url(/images/arrow.png) no-repeat -2px 3px;
   }
   div.port p a span:hover {
-    background: url(../images/arrow-wyt.png) no-repeat -2px 3px;
+    background: url(/images/arrow-wyt.png) no-repeat -2px 3px;
   }
   .port p a {
     padding: 6px 12px;

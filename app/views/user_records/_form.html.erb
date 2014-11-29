@@ -1,4 +1,4 @@
-<%= form_for(@user_record, html:{class: 'form-horizontal'}) do |f| %>
+<%= form_for(@user_record, html:{class: 'form-horizontal form-info', role: 'form'}) do |f| %>
   <% if @user_record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user_record.errors.count, "error") %> prohibited this user_record from being saved:</h2>
@@ -13,17 +13,17 @@
 </br>
 
   <div class="row">
-    <%= f.label :auto_brand_id, class: 'col-md-2' %>
-    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-4' %>
-    <%= f.label :auto_model_id, class: 'col-md-2' %>
-    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-md-4' %>
+    <%= f.label :auto_brand_id, class: 'col-md-1 col-md-offset-1' %>
+    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-3 form-item' %>
+    <%= f.label :auto_model_id, class: 'col-md-1 col-md-offset-2' %>
+    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-md-3 form-item' %>
   </div>
   <div class="clearfix"> </div>
   <div class="row">
-    <%= f.label :purchasing_date, class: 'col-md-2' %>
-    <%= f.text_field :purchasing_date, class: 'datepicker col-md-4' %>
-    <%= f.label :mile, class: 'col-md-2' %>
-    <%= f.number_field :mile, class: 'col-md-4' %>
+    <%= f.label :purchasing_date, class: 'col-md-1 col-md-offset-1' %>
+    <%= f.text_field :purchasing_date, class: 'datepicker col-md-3 form-item' %>
+    <%= f.label :mile, class: 'col-md-1 col-md-offset-2' %>
+    <%= f.number_field :mile, class: 'col-md-3 form-item' %>
   </div>
 
 

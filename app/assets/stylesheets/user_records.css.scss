@@ -1,3 +1,19 @@
 #select-model {
   font-size: 2em;
 }
+.form-info {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.form-info input {
+  border:2px solid #7B6C63;
+}
+
+.form-info .form-item {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  position: relative;
+}
