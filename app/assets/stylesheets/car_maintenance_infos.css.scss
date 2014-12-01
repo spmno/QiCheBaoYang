@@ -6,8 +6,13 @@ article{
   margin-bottom:40px;
 }
 
+article .post-heading {
+  border-bottom: 1px solid #303030;
+}
+
 article .post-heading h3 {
-  margin-bottom:20px;
+  margin-bottom:15px;
+  margin-top: 20px;
 }
 
 article .post-heading h3 a {
@@ -53,3 +58,4 @@ article .post-heading h3 a:hover {
 h1 {
   
 }
+

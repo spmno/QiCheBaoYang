@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
-<%= current_user.email %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<section id="content">
+  <div class="container">
+    <%= current_user.email %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+  </div>
+</section>
