@@ -21,3 +21,17 @@
 #content {
   min-height: 30em;
 }
+
+@media only screen and (max-width: 1366px) {
+  .row {
+    padding: 10px 10px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .singlerow {
+    padding: 30px 5px 5px 5px;
+  }
+}
+
+

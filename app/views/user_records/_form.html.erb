@@ -13,17 +13,26 @@
 </br>
 
   <div class="row">
-    <%= f.label :auto_brand_id, class: 'col-md-1 col-md-offset-1' %>
-    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-md-3 form-item' %>
-    <%= f.label :auto_model_id, class: 'col-md-1 col-md-offset-2' %>
-    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-md-3 form-item' %>
+    <div class="singlerow">
+      <%= f.label :auto_brand_id, class: 'col-xs-4 col-sm-4 col-md-1 col-md-offset-1' %>
+      <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-xs-8 col-sm-8 col-md-3 form-item' %>
+    </div>
+    <div class="singlerow">
+      <%= f.label :auto_model_id, class: 'col-xs-4 col-sm-4 col-md-1 col-md-offset-2' %>
+      <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-xs-8 col-sm-8 col-md-3 form-item' %>
+    </div>
+
   </div>
   <div class="clearfix"> </div>
   <div class="row">
-    <%= f.label :purchasing_date, class: 'col-md-1 col-md-offset-1' %>
-    <%= f.text_field :purchasing_date, class: 'datepicker col-md-3 form-item' %>
-    <%= f.label :mile, class: 'col-md-1 col-md-offset-2' %>
-    <%= f.number_field :mile, class: 'col-md-3 form-item' %>
+    <div class="singlerow">
+      <%= f.label :purchasing_date, class: 'col-xs-4 col-sm-4 col-md-1 col-md-offset-1' %>
+      <%= f.text_field :purchasing_date, class: 'datepicker col-xs-8 col-sm-8 col-md-3 form-item' %>
+    </div>
+    <div class="singlerow">
+      <%= f.label :mile, class: 'col-xs-4 col-sm-4 col-md-1 col-md-offset-2' %>
+      <%= f.number_field :mile, class: 'col-xs-8 col-sm-8 col-md-3 form-item' %>
+    </div>
   </div>
 
 
