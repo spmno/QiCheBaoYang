@@ -1,0 +1,29 @@
+<h1>Listing maintenance_goods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Photo</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maintenance_goods.each do |maintenance_good| %>
+      <tr>
+        <td><%= maintenance_good.name %></td>
+        <td><%= maintenance_good.photo %></td>
+        <td><%= maintenance_good.link %></td>
+        <td><%= link_to 'Show', maintenance_good %></td>
+        <td><%= link_to 'Edit', edit_maintenance_good_path(maintenance_good) %></td>
+        <td><%= link_to 'Destroy', maintenance_good, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maintenance good', new_maintenance_good_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @maintenance_good.name %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @maintenance_good.photo %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @maintenance_good.link %>
+</p>
+
+<%= link_to 'Edit', edit_maintenance_good_path(@maintenance_good) %> |
+<%= link_to 'Back', maintenance_goods_path %>

@@ -1,4 +1,6 @@
 Qichebaoyang::Application.routes.draw do
+  resources :maintenance_goods
+
   resources :car_maintenance_infos
 
   resources :customer_service_item_ships
