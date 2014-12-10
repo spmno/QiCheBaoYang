@@ -1,31 +1,33 @@
 <h1><%= t"list_auto_model" %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t"name" %></th>
-      <th><%= t"photo" %></th>
-      <th><%= t"auto_brand" %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<section id="content">
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th><%= t"name" %></th>
+          <th><%= t"photo" %></th>
+          <th><%= t"auto_brand" %></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @auto_models.each do |auto_model| %>
-      <tr>
-        <td><%= auto_model.name %></td>
-        <td><%= auto_model.auto_model_photo %></td>
-        <td><%= auto_model.auto_brand_id %></td>
-        <td><%= link_to 'Show', auto_model %></td>
-        <td><%= link_to 'Edit', edit_auto_model_path(auto_model) %></td>
-        <td><%= link_to 'Destroy', auto_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+      <tbody>
+        <% @auto_models.each do |auto_model| %>
+          <tr>
+            <td><%= auto_model.name %></td>
+            <td><%= image_tag auto_model.auto_model_photo %></td>
+            <td><%= auto_model.auto_brand_id %></td>
+            <td><%= link_to 'Show', auto_model %></td>
+            <td><%= link_to 'Edit', edit_auto_model_path(auto_model) %></td>
+            <td><%= link_to 'Destroy', auto_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <%= link_to t("new_auto_model"), new_auto_model_path %>
