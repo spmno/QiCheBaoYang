@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<section id="content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @auto_brand.name %>
-</p>
+    <p>
+      <strong><%= t("activerecord.attributes.auto_brand.name") %></strong>
+      <%= @auto_brand.name %>
+    </p>
 
-<p>
-  <strong>Auto brand photo:</strong>
-  <%= @auto_brand.auto_brand_photo %>
-</p>
+    <p>
+      <strong><%= t("activerecord.attributes.auto_brand.auto_brand_photo") %></strong>
+      <%= @auto_brand.auto_brand_photo %>
+    </p>
 
-<%= link_to 'Edit', edit_auto_brand_path(@auto_brand) %> |
-<%= link_to 'Back', auto_brands_path %>
+    <%= link_to 'Edit', edit_auto_brand_path(@auto_brand) %> |
+    <%= link_to 'Back', auto_brands_path %>
+  </div>
+
+</section>

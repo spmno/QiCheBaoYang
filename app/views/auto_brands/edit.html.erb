@@ -1,6 +1,11 @@
-<h1>Editing auto_brand</h1>
 
-<%= render 'form' %>
+<section id="content">
+  <div class="container">
+    <h1><%= t("edit_auto_brand") %></h1>
+    <%= render 'form' %>
 
-<%= link_to 'Show', @auto_brand %> |
-<%= link_to 'Back', auto_brands_path %>
+    <%= link_to 'Show', @auto_brand %> |
+    <%= link_to 'Back', auto_brands_path %>
+
+  </div>
+</section>

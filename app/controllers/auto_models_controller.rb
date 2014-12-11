@@ -20,6 +20,7 @@ class AutoModelsController < ApplicationController
 
   # GET /auto_models/1/edit
   def edit
+    @auto_brands = AutoBrand.all
   end
 
   # POST /auto_models
