@@ -34,4 +34,12 @@
   }
 }
 
+table {
+  margin-top: 2em;
+}
 
+table > caption {
+  text-align: center;
+  font-size: 2em;
+  padding: 2px 2px 2px 2px;
+}

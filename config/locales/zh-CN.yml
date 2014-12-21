@@ -71,6 +71,7 @@ zh-CN:
   donot_receive_unlock: '没有收到解锁'
   mile: '里程数'
   purchasing_date: '购买日期'
+  using_time: '使用时间'
 
   date:
     abbr_day_names:

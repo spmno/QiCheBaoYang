@@ -14,23 +14,29 @@ class UserRecordsController < ApplicationController
   # GET /user_records/1
   # GET /user_records/1.json
   def show
-    @user = User.find(params[:user_id])
-    if cookies[:create_flag] == 'true'
-      @new_user_record = UserRecord.new
-      @new_user_record.user_id = @user.id
-      @new_user_record.mile = cookies[:mile]
-      @new_user_record.purchasing_date = cookies[:purchasing_date]
-      @new_user_record.auto_model_id = cookies[:auto_model_id]
-      if user_record_is_empty? @new_user_record
-        if @new_user_record.save
-          printf "save new user record success"
-        else
-          printf "save new user record error"
-          return
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      if cookies[:create_flag] == 'true'
+        @new_user_record = UserRecord.new
+        @new_user_record.user_id = @user.id
+        @new_user_record.mile = cookies[:mile]
+        @new_user_record.purchasing_date = cookies[:purchasing_date]
+        @new_user_record.auto_model_id = cookies[:auto_model_id]
+        if user_record_is_empty? @new_user_record
+          if @new_user_record.save
+            printf "save new user record success"
+          else
+            printf "save new user record error"
+            return
+          end
         end
       end
+      @user_records = @user.user_records
+    else
+      @user_records = []
+      @user_records[0] = @user_record
     end
-    @user_records = @user.user_records
+
     #@user_records.each do | user_record |
       #current_model = user_record.auto_model.id
       #mile = user_record.mile
@@ -68,16 +74,17 @@ class UserRecordsController < ApplicationController
   def create
     @user_record = UserRecord.new(user_record_params)
 
-    if !user_signed_in?
-      cookies[:auto_model_id] = params[:user_record][:auto_model_id]
-      cookies[:purchasing_date] = params[:user_record][:purchasing_date]
-      cookies[:mile] = params[:user_record][:mile]
-      cookies[:create_flag] = "true"
-      #session[:return_to] = user_record_url
-      return redirect_to new_user_session_path
-    else
-      @user_record.user_id = current_user.id
-    end
+#    if !user_signed_in?
+#      cookies[:auto_model_id] = params[:user_record][:auto_model_id]
+#      cookies[:purchasing_date] = params[:user_record][:purchasing_date]
+#      cookies[:mile] = params[:user_record][:mile]
+#      cookies[:create_flag] = "true"
+#      #session[:return_to] = user_record_url
+#      return redirect_to new_user_session_path
+#    else
+#      @user_record.user_id = current_user.id
+#    end
+
     respond_to do |format|
       if @user_record.save
         format.html { redirect_to @user_record, notice: 'User record was successfully created.' }
