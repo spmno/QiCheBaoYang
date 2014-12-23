@@ -1,29 +1,35 @@
-<h1>Listing customers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Amount</th>
-      <th>User point</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <h1><%= t("list_customer") %></h1>
 
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.user_id %></td>
-        <td><%= customer.amount %></td>
-        <td><%= customer.user_point %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <table class="table-bordered">
+        <thead>
+        <tr>
+          <th><%= t("activerecord.attributes.customer.user") %></th>
+          <th><%= t("activerecord.attributes.customer.account") %></th>
+          <th><%= t("activerecord.attributes.customer.user_point") %></th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
 
-<br>
+        <tbody>
+        <% @customers.each do |customer| %>
+            <tr>
+              <td><%= customer.user.name %></td>
+              <td><%= customer.amount %></td>
+              <td><%= customer.user_point %></td>
+              <td><%= link_to 'Show', customer %></td>
+              <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+              <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
 
-<%= link_to 'New Customer', new_customer_path %>
+    </div>
+  </div>
+</section>
+
+<%= link_to t("new_customer"), new_customer_path %>

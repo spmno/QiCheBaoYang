@@ -1,6 +1,9 @@
 class ServiceStationsController < ApplicationController
   before_action :set_service_station, only: [:show, :edit, :update, :destroy]
 
+  def service_station_lists
+    @service_stations = ServiceStation.all
+  end
   # GET /service_stations
   # GET /service_stations.json
   def index

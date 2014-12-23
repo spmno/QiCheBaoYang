@@ -48,21 +48,21 @@
         <nav>
           <ul>
             <% if user_signed_in? %>
-                <li><%= nav_link 'Home', user_path(current_user) %></li>
+              <li><%= nav_link 'Home', user_path(current_user) %></li>
             <% else %>
-                <li><%= nav_link 'Home', root_path %></li>
+              <li><%= nav_link 'Home', root_path %></li>
             <% end %>
             <li><%= nav_link '周围服务点' , service_stations_path %></li>
             <li><%= nav_link '保养问题' , car_maintenance_infos_path %></li>
             <% if current_user %>
-                <li><%= link_to(t("exit"), destroy_user_session_path, :method => :delete) %></li>
-                <li><%= link_to(t("change_password"), edit_registration_path(:user)) %></li>
-                <% if can? :manager, :all %>
-                    <li><%= link_to t("manager"), user_administrations_path %></li>
-                <% end %>
+              <li><%= link_to(t("exit"), destroy_user_session_path, :method => :delete) %></li>
+              <li><%= link_to(t("change_password"), edit_registration_path(:user)) %></li>
+              <% if can? :manager, :all %>
+                <li><%= link_to t("manager"), user_administrations_path %></li>
+              <% end %>
             <% else %>
-                <li><%= link_to(t("sign_up"), new_registration_path(:user)) %></li>
-                <li><%= link_to(t("log_in"), new_session_path(:user)) %></li>
+              <li><%= link_to(t("sign_up"), new_registration_path(:user)) %></li>
+              <li><%= link_to(t("log_in"), new_session_path(:user)) %></li>
             <% end %>
             <div class="clearfix"> </div>
           </ul>

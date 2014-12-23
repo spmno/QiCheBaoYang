@@ -9,6 +9,7 @@ Qichebaoyang::Application.routes.draw do
 
 resources :service_items
 resources :service_stations
+  get 'service_station_lists', to: 'service_stations#service_station_lists'
   resources :user_administrations
   resources :user_records
 

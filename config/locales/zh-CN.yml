@@ -24,11 +24,14 @@ zh-CN:
         password_confirmation: '确认密码'
         remember_me: '记住我'
       service_station:
-        name: '维护中心名称'
+        name: '服务中心名称'
         address: '地址'
         longitude: '经度'
         latitude: '纬度'
         location: '位置-POINT(x y)'
+        mobile_phone: '移动电话'
+        office_phone: '办公电话'
+        phone: '电话'
       service_item:
         name: '保养项目名称'
         duration1: '起始时间'
@@ -40,13 +43,18 @@ zh-CN:
       car_maintenance_info:
         title: '标题'
         content: '内容'
-
+      customer:
+        user: '用户'
+        account: '帐户'
+        user_point: '积分'
 
   list_auto_brand: '汽车品牌列表'
   list_auto_model: '汽车型号列表'
   list_user: '用户列表'
   list_service_item: '保养记录列表'
+  list_service_station: '服务中心列表'
   list_car_maintenance_info: '保养信息列表'
+  list_customer: '用户列表'
   auto_brand: '汽车品牌'
   name: '名称'
   photo: '图片'
@@ -55,9 +63,11 @@ zh-CN:
   new_service_item: '新建保养项目'
   new_auto_maintenances: '新建修理厂'
   new_car_maintenances_info: '新建保养问题'
+  new_customer: '新建用户'
   edit_auto_brand: '编辑品牌'
   edit_auto_model: '编辑车型'
   edit_service_item: '编辑保养项目'
+  edit_customer: '编辑用户'
   select_auto_brand: '选择汽车品牌'
   back: '返回'
   complete: '完成'
