@@ -1,0 +1,27 @@
+<h1>Listing service_station_administrators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service station</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_station_administrators.each do |service_station_administrator| %>
+      <tr>
+        <td><%= service_station_administrator.service_station_id %></td>
+        <td><%= service_station_administrator.user_id %></td>
+        <td><%= link_to 'Show', service_station_administrator %></td>
+        <td><%= link_to 'Edit', edit_service_station_administrator_path(service_station_administrator) %></td>
+        <td><%= link_to 'Destroy', service_station_administrator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service station administrator', new_service_station_administrator_path %>

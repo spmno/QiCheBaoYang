@@ -1,0 +1,37 @@
+
+
+<section id="content">
+  <div class="container">
+    <h1><%= t("list_service_station") %></h1>
+    <table class="table-bordered">
+      <thead>
+      <tr>
+        <th><%= t("activerecord.attributes.service_station.name") %></th>
+        <th><%= t("activerecord.attributes.service_station.address") %></th>
+        <th><%= t("activerecord.attributes.service_station.location") %></th>
+        <td><%= t("activerecord.attributes.service_station.phone") %></td>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @service_stations.each do |service_station| %>
+          <tr>
+            <td><%= service_station.name %></td>
+            <td><%= service_station.address %></td>
+            <td><%= service_station.location %></td>
+            <td><%= service_station.office_phone %></td>
+            <td><%= service_station.mobile_phone %></td>
+            <td><%= link_to 'Show', service_station %></td>
+            <td><%= link_to 'Edit', service_station_path(service_station) %></td>
+            <td><%= link_to 'Destroy', service_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<%= link_to t("new_service_item"), new_service_item_path %>

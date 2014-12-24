@@ -1,4 +1,8 @@
 Qichebaoyang::Application.routes.draw do
+  resources :service_station_administrators
+
+  resources :customer_service_station_ships
+
   resources :maintenance_goods
 
   resources :car_maintenance_infos

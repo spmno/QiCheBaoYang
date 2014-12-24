@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203114108) do
+ActiveRecord::Schema.define(version: 20141224012546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20141203114108) do
   create_table "customer_service_item_ships", force: true do |t|
     t.integer  "customer_id"
     t.integer  "service_item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customer_service_station_ships", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "service_station_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -116,6 +123,7 @@ ActiveRecord::Schema.define(version: 20141203114108) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

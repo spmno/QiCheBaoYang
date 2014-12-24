@@ -1,0 +1,2 @@
+module CustomerServiceStationShipsHelper
+end

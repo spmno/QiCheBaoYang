@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service station:</strong>
+  <%= @service_station_administrator.service_station_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service_station_administrator.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_service_station_administrator_path(@service_station_administrator) %> |
+<%= link_to 'Back', service_station_administrators_path %>

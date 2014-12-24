@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @customer_service_station_ship.customer_id %>
+</p>
+
+<p>
+  <strong>Service station:</strong>
+  <%= @customer_service_station_ship.service_station_id %>
+</p>
+
+<%= link_to 'Edit', edit_customer_service_station_ship_path(@customer_service_station_ship) %> |
+<%= link_to 'Back', customer_service_station_ships_path %>

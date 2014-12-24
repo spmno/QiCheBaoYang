@@ -1,0 +1,2 @@
+module ServiceStationAdministratorsHelper
+end
