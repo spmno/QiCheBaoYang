@@ -1,0 +1,4 @@
+json.array!(@service_station_administrator_service_station_ships) do |service_station_administrator_service_station_ship|
+  json.extract! service_station_administrator_service_station_ship, :id, :service_station_administrator_id, :service_station_id
+  json.url service_station_administrator_service_station_ship_url(service_station_administrator_service_station_ship, format: :json)
+end
