@@ -47,6 +47,9 @@ zh-CN:
         user: '用户'
         account: '帐户'
         user_point: '积分'
+      service_station_administrator:
+        service_station: '服务中心名称'
+        user: '用户名'
 
   list_auto_brand: '汽车品牌列表'
   list_auto_model: '汽车型号列表'
