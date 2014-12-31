@@ -1,0 +1,34 @@
+<div class="contact s4" id="contact">
+  <div class="container">
+    <h3>填写信息，提供服务</h3>
+    <%= form_for(@user_record, html:{class: 'form-horizontal form-info', role: 'form'}) do |f| %>
+        <div class="row">
+          <div class="singlerow">
+            <%= f.label :auto_brand_id, class: 'col-xs-12 col-sm-12 col-md-1 col-md-offset-1' %>
+            <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'col-xs-12 col-sm-12 col-md-3 form-item' %>
+          </div>
+          <div class="singlerow">
+            <%= f.label :auto_model_id, class: 'col-xs-12 col-sm-12 col-md-1 col-md-offset-2' %>
+            <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌'}, class: 'col-xs-12 col-sm-12 col-md-3 form-item' %>
+          </div>
+
+        </div>
+        <div class="clearfix"> </div>
+        <div class="row">
+          <div class="singlerow">
+            <%= f.label :purchasing_date, class: 'col-xs-12 col-sm-12 col-md-1 col-md-offset-1' %>
+            <%= f.text_field :purchasing_date, class: 'datepicker col-xs-12 col-sm-12 col-md-3 form-item' %>
+          </div>
+          <div class="singlerow">
+            <%= f.label :mile, class: 'col-xs-12 col-sm-12 col-md-1 col-md-offset-2' %>
+            <%= f.number_field :mile, class: 'col-xs-12 col-sm-12 col-md-3 form-item' %>
+          </div>
+        </div>
+
+
+        <%= f.submit ("完成"), class: "btn btn-primary btn-lg col-xs-12 col-sm-12 col-md-12"%>
+
+    <% end %>
+
+  </div>
+</div>

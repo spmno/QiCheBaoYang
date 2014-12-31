@@ -9,7 +9,6 @@
           <th><%= t("activerecord.attributes.service_item.duration1") %></th>
           <th><%= t("activerecord.attributes.service_item.duration2") %></th>
           <th><%= t("activerecord.attributes.service_item.mile") %></th>
-          <th><%= t("activerecord.attributes.service_item.auto_model_id") %></th>
           <td><%= t("activerecord.attributes.service_item.step") %></td>
           <th></th>
           <th></th>
@@ -24,7 +23,6 @@
             <td><%= service_item.duration1 %></td>
             <td><%= service_item.duration2 %></td>
             <td><%= service_item.mile %></td>
-            <td><%= service_item.auto_model.name %></td>
             <td><%= service_item.step %></td>
             <td><%= link_to 'Show', service_item %></td>
             <td><%= link_to 'Edit', edit_service_item_path(service_item) %></td>

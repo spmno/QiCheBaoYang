@@ -1,0 +1,25 @@
+<%= form_for(@service_item_product_auto_model_ship) do |f| %>
+  <% if @service_item_product_auto_model_ship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_item_product_auto_model_ship.errors.count, "error") %> prohibited this service_item_product_auto_model_ship from being saved:</h2>
+
+      <ul>
+      <% @service_item_product_auto_model_ship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :service_item_product_id %><br>
+    <%= f.number_field :service_item_product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_model_id %><br>
+    <%= f.number_field :auto_model_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

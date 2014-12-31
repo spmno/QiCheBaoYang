@@ -26,6 +26,9 @@
   .row {
     padding: 10px 10px 10px 10px;
   }
+  select {
+    min-height: 20em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -35,6 +38,7 @@
   .singlerow {
     padding: 20px 5px 5px 0px;
   }
+
 }
 
 table {

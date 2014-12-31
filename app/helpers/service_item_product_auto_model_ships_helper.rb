@@ -1,0 +1,2 @@
+module ServiceItemProductAutoModelShipsHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing service_item_product_auto_model_ships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service item product</th>
+      <th>Auto model</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_item_product_auto_model_ships.each do |service_item_product_auto_model_ship| %>
+      <tr>
+        <td><%= service_item_product_auto_model_ship.service_item_product_id %></td>
+        <td><%= service_item_product_auto_model_ship.auto_model_id %></td>
+        <td><%= link_to 'Show', service_item_product_auto_model_ship %></td>
+        <td><%= link_to 'Edit', edit_service_item_product_auto_model_ship_path(service_item_product_auto_model_ship) %></td>
+        <td><%= link_to 'Destroy', service_item_product_auto_model_ship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service item product auto model ship', new_service_item_product_auto_model_ship_path %>

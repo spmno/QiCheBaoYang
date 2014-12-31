@@ -28,12 +28,6 @@
     <%= f.number_field :mile %>
   </div>
   <div class="field">
-    <%= f.label :auto_brand_id, class:'control-label' %>
-    <%= f.select :auto_brand_id, auto_brand_options, {}, class: 'form-control' %>
-    <%= f.label :auto_model_id, class:'control-label' %>
-    <%= f.select :auto_model_id, {}, { prompt: '请先选择品牌', class: 'form-control'} %>
-  </div>
-  <div class="field">
     <%= f.label :step %><br>
     <%= f.number_field :step %>
   </div>

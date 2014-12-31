@@ -5,6 +5,7 @@
 
   <%= javascript_include_tag "application"%>
   <%= javascript_include_tag params[:controller] %>
+  <%= yield :head %>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/fwslider.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/slider.css" />

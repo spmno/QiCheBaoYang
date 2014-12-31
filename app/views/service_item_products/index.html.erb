@@ -1,0 +1,33 @@
+
+<section id="content">
+  <div class="container">
+    <h1><%= t("list_service_item_product") %></h1>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Service item</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @service_item_products.each do |service_item_product| %>
+          <tr>
+            <td><%= service_item_product.name %></td>
+            <td><%= service_item_product.service_item_id %></td>
+            <td><%= link_to 'Show', service_item_product %></td>
+            <td><%= link_to 'Edit', edit_service_item_product_path(service_item_product) %></td>
+            <td><%= link_to 'Destroy', service_item_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Service item product', new_service_item_product_path %>
+
+  </div>
+</section>

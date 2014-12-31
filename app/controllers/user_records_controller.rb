@@ -65,6 +65,14 @@ class UserRecordsController < ApplicationController
     end
   end
 
+  def m_new
+    @user_record = UserRecord.new
+    @is_signed_in = false
+    if user_signed_in?
+      @user_record.user_id = current_user.id
+    end
+  end
+
   # GET /user_records/1/edit
   def edit
   end

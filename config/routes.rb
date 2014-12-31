@@ -1,4 +1,8 @@
 Qichebaoyang::Application.routes.draw do
+  resources :service_item_product_auto_model_ships
+
+  resources :service_item_products
+
   resources :service_station_administrator_service_station_ships
 
   resources :service_station_administrators
@@ -28,6 +32,7 @@ resources :service_stations
   resources :auto_brands
 
   get 'user_record/update_auto_models' => 'user_records#update_auto_models'
+  get 'm' => 'user_records#m_new'
   get 'service_item/update_auto_models' => 'service_items#update_auto_models'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
