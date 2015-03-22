@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141225141502) do
+ActiveRecord::Schema.define(version: 20141227045638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,20 @@ ActiveRecord::Schema.define(version: 20141225141502) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
+  create_table "service_item_product_auto_model_ships", force: true do |t|
+    t.integer  "service_item_product_id"
+    t.integer  "auto_model_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "service_item_products", force: true do |t|
+    t.string   "name"
+    t.integer  "service_item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "service_items", force: true do |t|
     t.string   "name"
     t.integer  "duration1"
@@ -87,7 +101,6 @@ ActiveRecord::Schema.define(version: 20141225141502) do
     t.integer  "mile"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "auto_model_id"
     t.integer  "step"
   end
 

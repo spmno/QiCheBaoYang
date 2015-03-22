@@ -3,7 +3,6 @@
 }
 .form-info {
   margin: 0 auto;
-  padding: 15px;
 }
 
 .form-info input {
@@ -12,9 +11,9 @@
 
 .form-info .form-item {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 15px;
   height: auto;
-  padding: 10px;
+  padding: 4px;
   position: relative;
 }
 
@@ -22,21 +21,41 @@
   min-height: 30em;
 }
 
+#input-group {
+  padding: 6px;
+}
+
+.input-item {
+  padding: 4px;
+}
+.information {
+  background-color: #EEEEEE;
+
+}
+.title {
+  font-size: 24px;
+  color:#EEEEEE;
+  background-color: #1b1b1b;
+  padding: 6px;
+}
+
+#commit-button {
+  padding: 12px;
+  margin: 10px;
+}
+
 @media only screen and (max-width: 1366px) {
   .row {
     padding: 10px 10px 10px 10px;
   }
   select {
-    min-height: 20em;
+    min-height: 5em;
   }
 }
 
 @media screen and (max-width: 800px) {
   .container {
     width: 100%;
-  }
-  .singlerow {
-    padding: 20px 5px 5px 0px;
   }
 
 }
