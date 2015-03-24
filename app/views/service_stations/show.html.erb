@@ -23,7 +23,7 @@
       <strong><%= t("activerecord.attributes.service_station.office_phone") %></strong>
       <%= @service_station.office_phone %>
     </p>
-
+    <%= link_to t("manager"), customers_path %>
     <%= link_to 'Edit', edit_service_station_path(@service_station) %> |
     <%= link_to 'Back', service_stations_path %>
 

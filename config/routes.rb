@@ -24,6 +24,7 @@ resources :service_stations
   resources :user_records
 
   devise_for :users
+
   resources :users do
     resource :user_records
   end
