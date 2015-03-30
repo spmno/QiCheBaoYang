@@ -1,10 +1,14 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-
   respond_to :html
 
   def index
-    @customers = Customer.all
+    if params[:service_station_id]
+      @service_station = ServiceStation.find(params[:service_station_id])
+      @customers = @service_station.customers
+    else
+      @customers = Customer.all
+    end
     respond_with(@customers)
   end
 
@@ -21,8 +25,14 @@ class CustomersController < ApplicationController
   end
 
   def create
-    @customer = Customer.new(customer_params)
-    @customer.save
+    if params[:service_station_id]
+      @customer = Customer.new(customer_params)
+      @customer.save
+    else
+      @customer = Customer.new(customer_params)
+      @customer.save
+    end
+
     respond_with(@customer)
   end
 

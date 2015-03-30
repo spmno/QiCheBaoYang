@@ -17,6 +17,10 @@ Qichebaoyang::Application.routes.draw do
 
   resources :customers
 
+  resources :service_stations do
+    resources :customers
+  end
+
 resources :service_items
 resources :service_stations
   get 'service_station_lists', to: 'service_stations#service_station_lists'
@@ -28,6 +32,7 @@ resources :service_stations
   resources :users do
     resource :user_records
   end
+
   resources :auto_models
   resources :auto_maintenances
   resources :auto_brands
